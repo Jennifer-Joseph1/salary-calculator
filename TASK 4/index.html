@@ -13,9 +13,12 @@
     function salaryCalculator () {
         var rate = document.getElementById("txtRate").value;
         var hoursWorked = document.getElementById("txtTotalHoursWorked").value;
+        Var extra_pay = 200;
         var salary = parseInt (rate) * parseInt (hoursWorked);
-
-        alert("Total Salary is " + salary);
+        if (hoursWorked > 4){
+            salary = (hoursWorked*1000) + (hoursWorked-4)*200;
+        }
+        alert("Your Total Salary for the hours you worked today  is " + salary);
     }
     </script>
 
