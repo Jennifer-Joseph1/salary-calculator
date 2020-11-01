@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALARY CALCULATOR</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--javascript-->
+    <script language="javascript">
+    function salaryCalculator () {
+        var rate = document.getElementById("txtRate").value;
+        var hoursWorked = document.getElementById("txtTotalHoursWorked").value;
+        var salary = parseInt (rate) * parseInt (hoursWorked);
+
+        alert("Total Salary is " + salary);
+    }
+    </script>
+
+</head>
+<body>
+ 
+ <table border="1" cellpadding="2" cellspacing="2" width="300px" align="center">
+   <tr>
+     <td align="center">
+       salary calculator
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <label>Rate</label><br>
+       <input class="text" type="text" id="txtRate">
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <label>Total hours worked</label><br>
+       <input class="text" type="text" id="txtTotalHoursWorked">
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <input onclick="return salaryCalculator ()" class="text" type="button" id="btnsubmit" value="compute">
+     </td>
+   </tr>
+ </table>
+</body>
+</html>
